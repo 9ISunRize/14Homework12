@@ -12,12 +12,17 @@ public class Main {
 
         book1.setYearOfPublication(2023);
         printBook(book1);
+
+        System.out.println(book1.equals(book2));
+        Book book2New = new Book("History Of Fatherland", author2, 1995);
+        System.out.println(book2.equals(book2New));
+
+        System.out.println(author1.getClass());
+        System.out.println(book1.getClass());
     }
 
     private static void printBook(Book book) {
-        System.out.println(book.getBookTitle() + " " + book.getYearOfPublication()
-                + " " + book.getAuthor().getAuthorName() + book.getAuthor().getAuthorSurname());
-
+        System.out.println(book.toString());
     }
 }
 
